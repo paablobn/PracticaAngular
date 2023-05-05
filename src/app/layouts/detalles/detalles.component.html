@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="card mb-3 border-white">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img [src]="detalle.getImagen()" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h1 class="card-title">{{detalle.getTitulo()}}</h1>
+                    <h3>{{ detalle.getPrecio() | currency:'EUR':'symbol-narrow':'1.2-2' }}</h3>
+                    <p>Color:</p>
+                    <img [src]="detalle.getImagen()" class="img-fluid rounded-start" alt="..." id="escala">
+                    <p>Elige tu talla:</p>
+                    <div class="lista-botones">
+                        <button type="button" class="btn btn-dark" [ngClass]="{'btn-tachado': !detalle.getTallas()[0]}">XS</button>
+                        <button type="button" class="btn btn-dark" [ngClass]="{'btn-tachado': !detalle.getTallas()[1]}">S</button>
+                        <button type="button" class="btn btn-dark" [ngClass]="{'btn-tachado': !detalle.getTallas()[2]}">M</button>
+                        <button type="button" class="btn btn-dark" [ngClass]="{'btn-tachado': !detalle.getTallas()[3]}">L</button>
+                        <button type="button" class="btn btn-dark" [ngClass]="{'btn-tachado': !detalle.getTallas()[4]}">XL</button>
+                      </div>
+                      
+                    <button type="button" class="btn btn-dark" id="carrito">Añadir al carrito<i
+                            class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

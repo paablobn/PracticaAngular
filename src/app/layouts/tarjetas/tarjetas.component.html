@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="card-group">
+      <div class="card text-white m-2" *ngFor="let tarjeta of tarjetas">
+        <img [src]="tarjeta.getImagen()" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h2 class="card-title">{{tarjeta.getTitulo()}}</h2>
+          <button class="card-text">{{tarjeta.getSubtitulo()}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

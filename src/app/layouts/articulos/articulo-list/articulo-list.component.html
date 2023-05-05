@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let articulo of articulos">
+            <div class="card m-3 border-white" (click)="verInfoArticulo(articulo.getId())">
+                <a [routerLink]="['detalles']">
+                    <img [src]="articulo.getImagen()" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{articulo.getNombre()}}</h5>
+                        <p class="card-text">{{ articulo.getPrecio() | currency:'EUR':'symbol-narrow':'1.2-2'}}</p>
+                        <p class="card-text" *ngIf="articulo.getDescuento()">
+                            <del>{{ articulo.getPrecio() | currency:'EUR':'symbol-narrow':'1.2-2' }}</del>
+                            <span class="text-danger">{{ articulo.getDescuento() |
+                                currency:'EUR':'symbol-narrow':'1.2-2'}}</span>
+                        </p>
+                        <button type="button" class="btn btn-outline-dark" *ngIf="articulo.isFavorito()">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

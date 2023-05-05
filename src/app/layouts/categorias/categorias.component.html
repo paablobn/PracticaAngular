@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="card-group">
+      <div class="card text-white m-3" *ngFor="let categoria of categorias">
+        <a [routerLink]="['articulos']">
+          <img [src]="categoria.getImagen()" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <div class="card-body">
+              <h3 class="card-title text-white">{{categoria.getNombre()}}</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

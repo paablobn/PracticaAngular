@@ -1,0 +1,46 @@
+button{
+    display: inline;
+    margin-bottom: 3em;
+    margin-right: 1em;
+}
+#carrito{
+    padding: 1em;
+    font-weight: bold;
+}
+#carrito:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+}
+#escala{
+    width: 10%;
+}
+.carr-body{
+    margin-left: 2em;
+}
+h3{
+    color: gray;
+}
+p{
+    margin-top: 1em;
+}
+img{
+    margin-bottom: 1em;
+    border-radius: 7px;
+}
+i{
+    margin-left: 1em;
+}
+.lista-botones button:hover{
+    background-color: white;
+    color: black;
+}
+.btn-tachado {
+    text-decoration: line-through;
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: rgb(185, 185, 185);
+    color: black;
+  }
+  
